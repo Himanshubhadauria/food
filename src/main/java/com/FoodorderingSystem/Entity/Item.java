@@ -12,8 +12,12 @@ public class Item {
 	int iid;
 	String iname;
 	String iprice;
+	String item_img;
 	
 	
+	
+
+
 	@OneToOne
 	Category category;
 
@@ -51,6 +55,7 @@ public class Item {
 	public void setIprice(String iprice) {
 		this.iprice = iprice;
 	}
+	
 
 
 	public Category getCategory() {
@@ -61,20 +66,29 @@ public class Item {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+	public String getItem_img() {
+		return item_img;
+	}
 
 
-	public Item(int iid, String iname, String iprice, Category category) {
+	public void setItem_img(String item_img) {
+		this.item_img = item_img;
+	}
+
+
+	public Item(int iid, String iname, String iprice, Category category, String item_img) {
 		super();
 		this.iid = iid;
 		this.iname = iname;
 		this.iprice = iprice;
 		this.category = category;
+		this.item_img= item_img;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Item [iid=" + iid + ", iname=" + iname + ", iprice=" + iprice + ", category=" + category + "]";
+		return "Item [iid=" + iid + ", iname=" + iname + ", iprice=" + iprice + ", category=" + category + ", Item Image="+ item_img +"]";
 	}
 
 

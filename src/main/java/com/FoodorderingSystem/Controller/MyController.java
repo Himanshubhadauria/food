@@ -40,7 +40,9 @@ public List<Customer> Allcust() {
 }
 @GetMapping("/item")
 public List<Item>Allitem(){
+	
 	return myservice.AllItem();
+	
 }
 
 @PostMapping("/item")
